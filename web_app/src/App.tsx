@@ -82,8 +82,10 @@ function AppShell() {
 }
 
 export default function App() {
+  // In production the app lives at /app on the Netlify site; in dev it's at /
+  const basename = import.meta.env.PROD ? '/app' : '/';
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <AuthProvider>
         <AppShell />
       </AuthProvider>

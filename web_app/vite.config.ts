@@ -1,8 +1,10 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [react()],
+  // In production the app is served from /app/ on the combined Netlify site
+  base: mode === 'production' ? '/app/' : '/',
   server: {
     port: 5173,
     host: true,
@@ -29,4 +31,4 @@ export default defineConfig({
       },
     },
   },
-})
+}))
