@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #131313;
+  --color-surface-container: #201f1f;
+  --color-surface-bright: #3a3939;
+  --color-primary: #4f78ff;
+  --color-primary-container: #0052ff;
+  --color-secondary: #b7c4ff;
+  --color-tertiary: #ffb4a1;
+  --color-error: #ffb4ab;
+  --color-outline: #8d90a2;
+  --color-on-surface: #e5e2e1;
+  --color-on-primary: #ffffff;
+  --font-family-sans: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #0a0a0a;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Mobile-like scrollbar */
+::-webkit-scrollbar {
+  width: 0;
+}
+
+/* Safe area for bottom nav */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Phone container shadow */
+.phone-container {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06), 0 25px 80px rgba(0, 0, 0, 0.8);
+}
+
+/* Smooth transitions */
+* {
+  transition-property: color, background-color, border-color, opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Disable transition for transform/layout to avoid jank */
+.no-transition {
+  transition: none !important;
+}
+
+/* Input autofill dark override */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #201f1f inset !important;
+  -webkit-text-fill-color: #e5e2e1 !important;
+  caret-color: #e5e2e1;
+}

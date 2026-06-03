@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "483931196700",
+    "project_id": "realbanking",
+    "storage_bucket": "realbanking.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:483931196700:android:a62015833e3779f285fed9",
+        "android_client_info": {
+          "package_name": "com.example.real_banking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "483931196700-2d83cah02hblun7bs3evnpv6hj7hck9h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhLZmJiYP5BR8stkTmhYL_mwIzNmky-gs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "483931196700-2d83cah02hblun7bs3evnpv6hj7hck9h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

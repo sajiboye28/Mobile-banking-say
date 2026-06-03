@@ -1,0 +1,19 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "admin-panel",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["node_modules/next/dist/bin/next", "dev", "--port", "3000"],
+      "port": 3000,
+      "cwd": "admin_panel"
+    },
+    {
+      "name": "flutter-app",
+      "runtimeExecutable": "flutter",
+      "runtimeArgs": ["run", "-d", "web-server", "--web-port", "4000", "--web-hostname", "localhost"],
+      "port": 4000,
+      "cwd": "mobile_app"
+    }
+  ]
+}
