@@ -1,13 +1,2 @@
-[build]
-  base    = "front_website"
-  command = "npm run build"
-  publish = "dist"
-
-[build.environment]
-  NODE_VERSION = "20"
-
-# SPA catch-all — serve index.html for every route
-[[redirects]]
-  from   = "/*"
-  to     = "/index.html"
-  status = 200
+# Each app has its own netlify.toml in its subdirectory.
+# This root file is intentionally left empty.
