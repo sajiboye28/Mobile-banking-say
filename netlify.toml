@@ -1,17 +1,12 @@
 [build]
+  base    = "front_website"
   command = "npm run build"
-  publish = "_site"
+  publish = "dist"
 
 [build.environment]
   NODE_VERSION = "20"
 
-# ── Web banking app — SPA routing for /app/* ─────────────────────────────────
-[[redirects]]
-  from   = "/app/*"
-  to     = "/app/index.html"
-  status = 200
-
-# ── Landing page — SPA catch-all ─────────────────────────────────────────────
+# SPA catch-all — serve index.html for every route
 [[redirects]]
   from   = "/*"
   to     = "/index.html"

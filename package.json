@@ -1,7 +1,4 @@
 {
   "name": "stcu-banking-platform",
-  "private": true,
-  "scripts": {
-    "build": "cd front_website && npm ci && npm run build && cd ../web_app && npm ci && npm run build && cd .. && mkdir -p _site && cp -r front_website/dist/. _site/ && mkdir -p _site/app && cp -r web_app/dist/. _site/app/"
-  }
+  "private": true
 }
