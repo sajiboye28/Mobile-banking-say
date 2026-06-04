@@ -1,0 +1,144 @@
+[
+  {
+    "name": "transactions",
+    "type": "base",
+    "schema": [
+      { "name": "userId",          "type": "text",   "required": true,  "options": {} },
+      { "name": "amount",          "type": "number", "required": true,  "options": {} },
+      { "name": "type",            "type": "text",   "required": true,  "options": {} },
+      { "name": "description",     "type": "text",   "required": false, "options": {} },
+      { "name": "status",          "type": "text",   "required": false, "options": {} },
+      { "name": "relatedUserId",   "type": "text",   "required": false, "options": {} },
+      { "name": "relatedUserName", "type": "text",   "required": false, "options": {} },
+      { "name": "recipient",       "type": "text",   "required": false, "options": {} }
+    ]
+  },
+  {
+    "name": "notifications",
+    "type": "base",
+    "schema": [
+      { "name": "userId",  "type": "text",   "required": true,  "options": {} },
+      { "name": "title",   "type": "text",   "required": true,  "options": {} },
+      { "name": "message", "type": "text",   "required": false, "options": {} },
+      { "name": "type",    "type": "text",   "required": false, "options": {} },
+      { "name": "isRead",  "type": "bool",   "required": false, "options": {} },
+      { "name": "data",    "type": "text",   "required": false, "options": {} }
+    ]
+  },
+  {
+    "name": "bill_payments",
+    "type": "base",
+    "schema": [
+      { "name": "userId",        "type": "text",   "required": true,  "options": {} },
+      { "name": "category",      "type": "text",   "required": false, "options": {} },
+      { "name": "biller",        "type": "text",   "required": false, "options": {} },
+      { "name": "accountNumber", "type": "text",   "required": false, "options": {} },
+      { "name": "amount",        "type": "number", "required": true,  "options": {} },
+      { "name": "status",        "type": "text",   "required": false, "options": {} }
+    ]
+  },
+  {
+    "name": "virtual_cards",
+    "type": "base",
+    "schema": [
+      { "name": "userId",         "type": "text",   "required": true,  "options": {} },
+      { "name": "cardNumber",     "type": "text",   "required": true,  "options": {} },
+      { "name": "cvv",            "type": "text",   "required": false, "options": {} },
+      { "name": "expiryMonth",    "type": "number", "required": false, "options": {} },
+      { "name": "expiryYear",     "type": "number", "required": false, "options": {} },
+      { "name": "cardholderName", "type": "text",   "required": false, "options": {} },
+      { "name": "isFrozen",       "type": "bool",   "required": false, "options": {} },
+      { "name": "dailyLimit",     "type": "number", "required": false, "options": {} },
+      { "name": "monthlyLimit",   "type": "number", "required": false, "options": {} }
+    ]
+  },
+  {
+    "name": "loans",
+    "type": "base",
+    "schema": [
+      { "name": "userId",         "type": "text",   "required": true,  "options": {} },
+      { "name": "amount",         "type": "number", "required": true,  "options": {} },
+      { "name": "purpose",        "type": "text",   "required": false, "options": {} },
+      { "name": "termMonths",     "type": "number", "required": false, "options": {} },
+      { "name": "interestRate",   "type": "number", "required": false, "options": {} },
+      { "name": "monthlyPayment", "type": "number", "required": false, "options": {} },
+      { "name": "status",         "type": "text",   "required": false, "options": {} }
+    ]
+  },
+  {
+    "name": "savings_goals",
+    "type": "base",
+    "schema": [
+      { "name": "userId",        "type": "text",   "required": true,  "options": {} },
+      { "name": "name",          "type": "text",   "required": true,  "options": {} },
+      { "name": "targetAmount",  "type": "number", "required": true,  "options": {} },
+      { "name": "currentAmount", "type": "number", "required": false, "options": {} },
+      { "name": "icon",          "type": "text",   "required": false, "options": {} },
+      { "name": "color",         "type": "text",   "required": false, "options": {} },
+      { "name": "deadline",      "type": "date",   "required": false, "options": {} },
+      { "name": "isCompleted",   "type": "bool",   "required": false, "options": {} }
+    ]
+  },
+  {
+    "name": "transaction_otps",
+    "type": "base",
+    "schema": [
+      { "name": "userId",    "type": "text", "required": true,  "options": {} },
+      { "name": "code",      "type": "text", "required": true,  "options": {} },
+      { "name": "expiresAt", "type": "date", "required": false, "options": {} },
+      { "name": "used",      "type": "bool", "required": false, "options": {} }
+    ]
+  },
+  {
+    "name": "kyc_verifications",
+    "type": "base",
+    "schema": [
+      { "name": "userId",           "type": "text", "required": true,  "options": {} },
+      { "name": "userName",         "type": "text", "required": false, "options": {} },
+      { "name": "fullName",         "type": "text", "required": false, "options": {} },
+      { "name": "userEmail",        "type": "text", "required": false, "options": {} },
+      { "name": "email",            "type": "text", "required": false, "options": {} },
+      { "name": "documentType",     "type": "text", "required": false, "options": {} },
+      { "name": "documentNumber",   "type": "text", "required": false, "options": {} },
+      { "name": "documentExpiry",   "type": "date", "required": false, "options": {} },
+      { "name": "dateOfBirth",      "type": "date", "required": false, "options": {} },
+      { "name": "nationality",      "type": "text", "required": false, "options": {} },
+      { "name": "address",          "type": "text", "required": false, "options": {} },
+      { "name": "city",             "type": "text", "required": false, "options": {} },
+      { "name": "country",          "type": "text", "required": false, "options": {} },
+      { "name": "postalCode",       "type": "text", "required": false, "options": {} },
+      { "name": "documentFrontUrl", "type": "text", "required": false, "options": {} },
+      { "name": "documentBackUrl",  "type": "text", "required": false, "options": {} },
+      { "name": "documentFront",    "type": "text", "required": false, "options": {} },
+      { "name": "documentBack",     "type": "text", "required": false, "options": {} },
+      { "name": "selfieUrl",        "type": "text", "required": false, "options": {} },
+      { "name": "selfie",           "type": "text", "required": false, "options": {} },
+      { "name": "status",           "type": "text", "required": false, "options": {} },
+      { "name": "submittedAt",      "type": "date", "required": false, "options": {} },
+      { "name": "rejectionReason",  "type": "text", "required": false, "options": {} },
+      { "name": "reviewedAt",       "type": "date", "required": false, "options": {} },
+      { "name": "reviewedBy",       "type": "text", "required": false, "options": {} }
+    ]
+  },
+  {
+    "name": "support_tickets",
+    "type": "base",
+    "schema": [
+      { "name": "userId",   "type": "text", "required": true,  "options": {} },
+      { "name": "subject",  "type": "text", "required": false, "options": {} },
+      { "name": "message",  "type": "text", "required": false, "options": {} },
+      { "name": "status",   "type": "text", "required": false, "options": {} },
+      { "name": "priority", "type": "text", "required": false, "options": {} },
+      { "name": "response", "type": "text", "required": false, "options": {} }
+    ]
+  },
+  {
+    "name": "systemConfig",
+    "type": "base",
+    "schema": [
+      { "name": "key",   "type": "text", "required": true,  "options": {} },
+      { "name": "value", "type": "text", "required": false, "options": {} },
+      { "name": "label", "type": "text", "required": false, "options": {} }
+    ]
+  }
+]
